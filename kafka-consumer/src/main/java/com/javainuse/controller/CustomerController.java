@@ -10,13 +10,12 @@ import com.javainuse.repo.CustomerRepo;
 import java.util.List;
 
 @RestController
-
-
 public class CustomerController {
-    @Autowired
-    private CustomerRepo customerRepo;
-    @GetMapping("/all")
-    public List<Customer> getAll(){
-       return customerRepo.findAll();
-    }
+	@Autowired
+	private CustomerRepo customerRepo;
+
+	@GetMapping("/all")
+	public List<Customer> getAll() {
+		return customerRepo.findAll();
+	}
 }

@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/dev?useSSL=false
+    url: jdbc:mysql://localhost:3306/bootdb?useSSL=false
     username: root
-    password: divya
+    password: user
     hikari:
       initialization-fail-timeout: 0
     jpa:

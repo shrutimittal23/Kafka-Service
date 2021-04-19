@@ -1,4 +1,4 @@
-package com.divya.kafka;
+package com.producer.kafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

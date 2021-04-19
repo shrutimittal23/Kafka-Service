@@ -15,10 +15,10 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="customer")
+@Table(name = "customer")
 public class Customer {
-    @Id
-    Long id;
-@Column(name="name")
-    String name;
+	@Id
+	Long id;
+	@Column(name = "name")
+	String name;
 }

@@ -10,6 +10,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Customer {
-    public Long id;
-    public String name;
+	public Long id;
+	public String name;
 }

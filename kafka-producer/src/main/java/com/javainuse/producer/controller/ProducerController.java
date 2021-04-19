@@ -17,16 +17,16 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 public class ProducerController {
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+	@Autowired
+	private KafkaTemplate<String, String> kafkaTemplate;
 
-    @Autowired
-    private Gson gson;
+	@Autowired
+	private Gson gson;
 
-    @PostMapping("/produce")
-    public ResponseEntity<String> postModelToKafka(@RequestBody Customer customer)
-            throws InterruptedException, ExecutionException {
-        ListenableFuture<SendResult<String, String>> result = kafkaTemplate.send("customer", gson.toJson(customer));
-        return new ResponseEntity<>(result.get().getProducerRecord().value(), HttpStatus.OK);
-    }
+	@PostMapping("/produce")
+	public ResponseEntity<String> postModelToKafka(@RequestBody Customer customer)
+			throws InterruptedException, ExecutionException {
+		ListenableFuture<SendResult<String, String>> result = kafkaTemplate.send("customer", gson.toJson(customer));
+		return new ResponseEntity<>(result.get().getProducerRecord().value(), HttpStatus.OK);
+	}
 }
